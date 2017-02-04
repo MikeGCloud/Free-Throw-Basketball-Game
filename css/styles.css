@@ -1,0 +1,144 @@
+
+/******** GAME ********/
+.game-bg h1 {
+    color: #fff;
+}
+.game-bg {
+    background: url(../images/game-bg.jpg) no-repeat center top transparent;
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+    min-height: 47.5em;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+}
+.pregame-wrapper {
+    display: none;
+    margin-top:46%;
+}
+.pregame-ball-img {
+    width: 195px;
+    height: 195px;
+}
+.ball-column {
+    display: inline-block;
+    width: 15.5em;
+}
+.game-btn {
+    background: url(../images/game-btn.png) no-repeat center center transparent;
+    padding: 1.2em 0;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer; 
+    font-family:'Roboto', sans-serif;
+    line-height: 1em;
+    font-weight: 900;
+    font-style: italic;
+    background-size: auto 100%;
+    font-size: 1.1em;
+}
+.game-bg .pregame-wrapper {
+    display: block;
+}
+.game-bg-hand {
+    background-image: url(../images/game-bg-hand.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 0;
+    min-height: 47.5em;
+    overflow: hidden;
+    position:relative;
+}
+.game-bg-hand.animate {
+    background: url(../images/game-bg-play.jpg) no-repeat center top transparent;
+    -webkit-transition: background 2s ease;
+    -moz-transition: background 2s ease;
+    -o-transition: background 2s ease;
+    transition: background 2s ease;
+}
+.game-bg-hand.net:after {
+    content:'';
+    background: url(../images/net.png) no-repeat center top transparent;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    z-index:2;
+}
+.ball-shoot {
+/*  height: 44.5em;
+    position: absolute;*/
+    overflow: hidden;
+    display: none;
+}
+.game-bg-hand .ball-shoot {
+    display: block;
+}
+.ball-shoot .game-btn {
+    padding: 1.2em 0;
+    position: absolute;
+    bottom: 12em;
+    width: 100%;
+    z-index:4;
+}
+.animate .game-btn {
+    display: none;
+}
+.hand {
+    position: absolute;
+    bottom: -3px;
+    height: 24em;
+    margin: 0 33.5%;
+    width: 33%;
+    left: 0;
+}
+
+/*.animate .hand{
+bottom:-500px;
+-webkit-transition: bottom 2s ease;
+-moz-transition: bottom 2s ease;
+-o-transition: bottom 2s ease;
+transition: bottom 2s ease;
+}*/
+.hand-orange {
+    background: url(../images/hand-orange.png) no-repeat center bottom transparent;
+}
+.active-game-ball {
+    position: absolute;
+    bottom: -390px;
+    width: 100%;
+    z-index:2;
+    /*transform:rotate(-36deg);*/
+}
+#result{
+    font-size: 2em;
+    position: absolute;
+    top: 1em;
+    width: 100%;
+    text-align: center;
+    /* margin: 0 auto; */
+    color: #fff;
+    z-index: 2;
+    left: 0;
+    padding: 0;
+
+}
+@media only screen and (max-width: 767px) {
+    #gamestage{
+        width:100%;
+        height:auto;
+    }
+    .pregame-ball-img{
+        width:11em;
+        height:11em;
+    }
+    .hand{
+        width:100%;
+        margin:0 auto;
+    }
+    .relative{
+        padding:0;
+    }
+}
